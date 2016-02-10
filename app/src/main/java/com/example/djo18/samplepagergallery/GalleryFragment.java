@@ -17,7 +17,6 @@ public class GalleryFragment extends Fragment {
     RecyclerView recyclerView;
     GalleryAdapter adapter;
 
-
     private ParcelableGallery parcelableGallery;
 
 
@@ -40,7 +39,7 @@ public class GalleryFragment extends Fragment {
             parcelableGallery = getArguments().getParcelable(ARG_GALLERY);
         }
 
-        adapter = new GalleryAdapter(parcelableGallery, getContext());
+        adapter = new GalleryAdapter(parcelableGallery, getActivity());
     }
 
     @Override
@@ -55,5 +54,4 @@ public class GalleryFragment extends Fragment {
 
         return view;
     }
-
 }
